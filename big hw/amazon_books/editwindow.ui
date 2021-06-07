@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EditWindow</class>
+ <widget class="QDialog" name="EditWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>765</width>
+    <height>575</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_6">
+   <item row="0" column="0">
+    <widget class="QTableView" name="tableView"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QFrame" name="frame_2">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="0" column="0">
+       <widget class="QFrame" name="frame_3">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QFrame" name="frame_6">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>wishlist</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QFrame" name="frame_4">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QFrame" name="frame_7">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>read now</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QFrame" name="frame_5">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QFrame" name="frame_8">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>finished</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="1" rowspan="2">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QPushButton" name="addButton">
+        <property name="text">
+         <string>Add new</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="removeButton">
+        <property name="text">
+         <string>Remove</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QPushButton" name="finishedBitton">
+        <property name="text">
+         <string>Finished</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="nowButton">
+        <property name="text">
+         <string>In Progress</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="wishButton">
+        <property name="text">
+         <string>To wish list</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>removeButton</sender>
+   <signal>clicked()</signal>
+   <receiver>EditWindow</receiver>
+   <slot>removeRow()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>709</x>
+     <y>245</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>945</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>wishButton</sender>
+   <signal>clicked()</signal>
+   <receiver>EditWindow</receiver>
+   <slot>wishList()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>721</x>
+     <y>322</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>926</x>
+     <y>318</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>finishedBitton</sender>
+   <signal>clicked()</signal>
+   <receiver>EditWindow</receiver>
+   <slot>finishedList()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>708</x>
+     <y>495</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>863</x>
+     <y>487</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>nowButton</sender>
+   <signal>clicked()</signal>
+   <receiver>EditWindow</receiver>
+   <slot>progressList()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>686</x>
+     <y>401</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>891</x>
+     <y>417</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>removeRow()</slot>
+  <slot>wishList()</slot>
+  <slot>finishedList()</slot>
+  <slot>progressList()</slot>
+ </slots>
+</ui>
